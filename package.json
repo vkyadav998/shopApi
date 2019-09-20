@@ -1,0 +1,19 @@
+{
+  "name": "shopapi",
+  "version": "1.0.0",
+  "description": "shop api for react app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkyadav998/shopApi.git"
+  },
+  "author": "vipin yadav vkyadav998@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkyadav998/shopApi/issues"
+  },
+  "homepage": "https://github.com/vkyadav998/shopApi#readme"
+}
