@@ -9,9 +9,9 @@ app.use(bodyParser.json({limit: config.LIMIT}));
 app.use(bodyParser.urlencoded({limit: config.LIMIT, extended: true }));
 
 
-mongoose.connect(config.DB_PATH);
+// mongoose.connect(config.DB_PATH);
 
-let router = express.Router();
+// let router = express.Router();
 
 // let appRouter = require('./routing/appRoute');
 
