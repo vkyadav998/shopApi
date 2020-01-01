@@ -4,6 +4,8 @@ var router = express.Router();
 var productPageController = require('../controllers/productPageController');
 
 /* Fetch Product List */
-router.post('/', productPageController.getProductList);
+router.get('/getAppProducts', productPageController.getProductList);
+
+router.post('/addProduct', productPageController.addProduct);
 
 module.exports = router;

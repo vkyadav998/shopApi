@@ -9,11 +9,11 @@ config.express = {
 }
 
 config.mongodb = {
-  url: "mongodb://host.docker.internal:27017/master",
+  url: "mongodb://host.docker.internal:27017/",
   dbName: 'shopApp',
 }
 
-config.DB_PATH = `${config.mongodb.url}`
+config.DB_PATH = `${config.mongodb.url + config.mongodb.dbName}`
 
 if (PRODUCTION) {
   // for example
