@@ -7,19 +7,21 @@ require('../models/productSchema');
 var  PRODUCT_MODEL = mongoose.model('PRODUCT_MODEL');
 let proctDBService = {
 
-  getAllProduct : function(req, res){
-    return PRODUCT_MODEL.find({}, function (err, docs){
-      if (err) return console.error(err);
-      res.json({"success" : true, allItom : docs});
+  getAllProduct : function(){
+    return PRODUCT_MODEL.find({}).then(docs => {
+      return {"success" : true, allItom : docs}
+    }).catch(err=>{
+      console.error(err);
     });
   },
 
-  addProduct : function(req, res){
-    const product = new PRODUCT_MODEL(req.body);
-    product.save(function(err, data) {
-      if (err) return console.error(err);
-      res.json(data);
-    });
+  addProduct : function(data){
+    const product = new PRODUCT_MODEL(data);
+    return product.save().then(res => {
+      return res;
+    }).catch(err=>{
+      console.error(err);
+    })
   }
 
 }
